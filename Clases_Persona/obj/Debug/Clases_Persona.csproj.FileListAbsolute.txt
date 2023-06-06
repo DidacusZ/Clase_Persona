@@ -1,0 +1,8 @@
+C:\Users\Equipo\Desktop\CLASE\PROGRAMACION\4º evaluacion (objetos)\Clases_Persona\Clases_Persona\bin\Debug\Clases_Persona.exe.config
+C:\Users\Equipo\Desktop\CLASE\PROGRAMACION\4º evaluacion (objetos)\Clases_Persona\Clases_Persona\bin\Debug\Clases_Persona.exe
+C:\Users\Equipo\Desktop\CLASE\PROGRAMACION\4º evaluacion (objetos)\Clases_Persona\Clases_Persona\bin\Debug\Clases_Persona.pdb
+C:\Users\Equipo\Desktop\CLASE\PROGRAMACION\4º evaluacion (objetos)\Clases_Persona\Clases_Persona\obj\Debug\Clases_Persona.csproj.AssemblyReference.cache
+C:\Users\Equipo\Desktop\CLASE\PROGRAMACION\4º evaluacion (objetos)\Clases_Persona\Clases_Persona\obj\Debug\Clases_Persona.csproj.SuggestedBindingRedirects.cache
+C:\Users\Equipo\Desktop\CLASE\PROGRAMACION\4º evaluacion (objetos)\Clases_Persona\Clases_Persona\obj\Debug\Clases_Persona.csproj.CoreCompileInputs.cache
+C:\Users\Equipo\Desktop\CLASE\PROGRAMACION\4º evaluacion (objetos)\Clases_Persona\Clases_Persona\obj\Debug\Clases_Persona.exe
+C:\Users\Equipo\Desktop\CLASE\PROGRAMACION\4º evaluacion (objetos)\Clases_Persona\Clases_Persona\obj\Debug\Clases_Persona.pdb
