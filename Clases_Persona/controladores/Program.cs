@@ -31,44 +31,47 @@ namespace Clases_Persona
 
             //StreamReader sr = new StreamReader("Personas.txt", Encoding.Default);//asi
 
-
-            do
+            try
             {
-                opcion = menu.Menu();
-                Console.Clear();
-                switch (opcion)
+                do
                 {
-                    //nueva persona
-                    case 1:
-                        util.AgregarPersona();
-                        break;
+                    opcion = menu.Menu();
+                    Console.Clear();
+                    switch (opcion)
+                    {
+                        //nueva persona
+                        case 1:
+                            util.AgregarPersona();
+                            break;
 
-                    //mostrar personas
-                    case 2:
-                        try
-                        {
-                            util.MostrarPersonas(listaPersonas);
-                        }catch (Exception ex) 
-                        {
-                            util.Error("No hay ninguna persona agregada, porfavor añade una");
-                        }
-                        
-                        break;
+                        //nueva persona
+                        case 2:
+                            try
+                            {
+                                util.MostrarPersonas(listaPersonas);
+                            }catch (Exception ex) 
+                            {
+                                util.Error("No hay ninguna persona agregada, porfavor añade una");
+                            }
 
-                    //salir
-                    case 0:
-                        break;
+                            break;
 
-                    //control error
-                    default:
-                        util.Error("Opción no válida, pulsa una tecla para volver al menu");
-                        break;
-                }
-            } while (opcion!=0);
+                        //salir
+                        case 0:
+                            break;
 
-            //sw.Close();
+                        //control error
+                        default:
+                            util.Error("Opción no válida, pulsa una tecla para volver al menu");
+                            break;
+                    }
+                } while (opcion != 0);
+            }
+            catch (Exception ex) {
+
+                util.Error("ERROR GENERAL");
+            }
             util.Error("Pulsa una tecla para SALIR");
-
         }
     }
 }

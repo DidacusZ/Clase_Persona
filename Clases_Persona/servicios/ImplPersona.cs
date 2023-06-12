@@ -1,5 +1,6 @@
 ﻿using Clases_Persona.entidades;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -57,7 +58,8 @@ namespace Clases_Persona.servicios
                 listaLineas.Add(linea); // guardo en la lista de todas las lineas del fichero
             }
 
-            Console.WriteLine("\n\t---Leemos listaLineas a partir de la segunda linea----");
+            listaPersonas.Clear();//borramos el contenido de la lista para que no haya duplicados
+            Console.WriteLine("\n\t---Leemos listaLineas a partir de la segunda linea----\n");
             for (int i = 1; i < listaLineas.Count; i++)
             {
                 Console.WriteLine(listaLineas[i]);
@@ -71,13 +73,12 @@ namespace Clases_Persona.servicios
                 persona.Dia = Convert.ToInt32(vLineas[2]);
                 persona.Mes = Convert.ToInt32(vLineas[3]);
                 persona.Anio = Convert.ToInt32(vLineas[4]);
-                
-                //añadimos objeto a lista
-                listaPersonas.Add(persona);
-                
+
+                //añadimos objeto a lista              
+                listaPersonas.Add(persona);                    
             }
             
-            Console.WriteLine("\n\t---Leemos de la listaPersonas----");
+            Console.WriteLine("\n\t---Leemos de la listaPersonas----\n");
             for (int i = 0; i < listaPersonas.Count; i++)
             {
                 Console.WriteLine(listaPersonas[i].ToString());
