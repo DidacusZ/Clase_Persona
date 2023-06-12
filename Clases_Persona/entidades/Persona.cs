@@ -39,13 +39,8 @@ namespace Clases_Persona.entidades
         public string ToString()
         {
             string concatenacion = "";
-
-            concatenacion = "Persona => [ Nombre = '" + nombre
-                + "' Apellidos = '" + apellidos + "' Dia = '" + dia
-                + "' Mes = '" + mes + "' Anio = '" + anio + "' ]";
-
+            concatenacion = String.Format("{0},{1},{2},{3},{4}", nombre, apellidos, dia,mes,anio);
             return concatenacion;
-
         }
     }
 }

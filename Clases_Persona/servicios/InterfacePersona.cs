@@ -14,8 +14,8 @@ namespace Clases_Persona.servicios
 
         int CapturaEntero(string texto, int min, int max);
 
-        List<Persona> AgregarPersona(List<Persona> listaPersonas);
+        AgregarPersona();
 
-        void MostrarPersonas(List<Persona> listaPersonas, StreamWriter sw);
+        void MostrarPersonas(List<Persona> listaPersonas);
     }
 }

@@ -27,7 +27,10 @@ namespace Clases_Persona
             List<Persona> listaPersonas = new List<Persona>();
 
             //● Con AppendText, si el fichero existe escribirá a continuación.  si no lo crea
-            StreamWriter sw = File.AppendText("Personas.txt");
+            //StreamWriter sw = File.AppendText("Personas.txt");
+
+            //StreamReader sr = new StreamReader("Personas.txt", Encoding.Default);//asi
+
 
             do
             {
@@ -37,12 +40,12 @@ namespace Clases_Persona
                 {
                     //nueva persona
                     case 1:
-                        util.AgregarPersona(listaPersonas);
+                        util.AgregarPersona();
                         break;
 
                     //mostrar personas
                     case 2:
-                        util.MostrarPersonas(listaPersonas,sw);
+                        util.MostrarPersonas(listaPersonas);
                         break;
 
                     //salir
@@ -57,7 +60,7 @@ namespace Clases_Persona
                 }
             } while (opcion!=0);
 
-            sw.Close();
+            //sw.Close();
             Console.Write("\n\n\t\tPulsa una tecla para SALIR...");
             Console.ReadKey(true);
         }
