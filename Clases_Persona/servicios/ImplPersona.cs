@@ -17,6 +17,12 @@ namespace Clases_Persona.servicios
             return Console.ReadLine();
         }
 
+        public void Error(string txt)
+        {
+            Console.Write("\n\n\t\t{0}....",txt);
+            Console.ReadKey(true);
+        }
+
         public int CapturaEntero(string texto, int min, int max)
         {
             bool esCorrecto;
@@ -38,12 +44,11 @@ namespace Clases_Persona.servicios
 
         public void MostrarPersonas(List<Persona> listaPersonas)
         {
-            StreamReader sr = new StreamReader("Personas.txt", Encoding.Default);//asi
-            Persona persona = new Persona();
-
+            StreamReader sr = new StreamReader("Personas.txt", Encoding.Default);//asi      
             List<string> listaLineas = new List<string>();
 
             //leo todo el fichero
+            Console.WriteLine("\n\t---Leemos el fichero completo----\n");
             while (!(sr.EndOfStream)) // Mientras no estoy en el final del fichero
             {
                 string linea;
@@ -58,15 +63,9 @@ namespace Clases_Persona.servicios
                 Console.WriteLine(listaLineas[i]);
                 string[] vLineas= listaLineas[i].Split(','); // separo los campos en el vector
 
-                //mostramos
-                Console.WriteLine(vLineas[0]);
-                Console.WriteLine(vLineas[1]);
-                Console.WriteLine(vLineas[2]);
-                Console.WriteLine(vLineas[3]);
-                Console.WriteLine(vLineas[4]);
-
                 //guardamos los campos en el objeto persona
-                
+                Persona persona = new Persona();
+
                 persona.Nombre = vLineas[0];
                 persona.Apellidos = vLineas[1];
                 persona.Dia = Convert.ToInt32(vLineas[2]);
@@ -75,14 +74,13 @@ namespace Clases_Persona.servicios
                 
                 //añadimos objeto a lista
                 listaPersonas.Add(persona);
-                Console.WriteLine(listaPersonas[0].ToString());
                 
             }
             
-            //Console.WriteLine("\n\t---Leemos de la listaPersonas----");
+            Console.WriteLine("\n\t---Leemos de la listaPersonas----");
             for (int i = 0; i < listaPersonas.Count; i++)
             {
-                Console.WriteLine(listaPersonas[0].ToString());
+                Console.WriteLine(listaPersonas[i].ToString());
             }
             
             sr.Close();

@@ -45,7 +45,14 @@ namespace Clases_Persona
 
                     //mostrar personas
                     case 2:
-                        util.MostrarPersonas(listaPersonas);
+                        try
+                        {
+                            util.MostrarPersonas(listaPersonas);
+                        }catch (Exception ex) 
+                        {
+                            util.Error("No hay ninguna persona agregada, porfavor añade una");
+                        }
+                        
                         break;
 
                     //salir
@@ -54,15 +61,14 @@ namespace Clases_Persona
 
                     //control error
                     default:
-                        Console.Write("\n\n\t\tOpción no válida, pulsa una tecla para volver al menu");
-                        Console.ReadKey(true);
+                        util.Error("Opción no válida, pulsa una tecla para volver al menu");
                         break;
                 }
             } while (opcion!=0);
 
             //sw.Close();
-            Console.Write("\n\n\t\tPulsa una tecla para SALIR...");
-            Console.ReadKey(true);
+            util.Error("Pulsa una tecla para SALIR");
+
         }
     }
 }
