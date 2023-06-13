@@ -10,7 +10,7 @@ namespace Clases_Persona.servicios
     internal interface InterfaceMenu
     {
         int Menu();
-        int CapturaNumPulsado(string mensaje, int min, int max);
+        //int CapturaNumPulsado(string mensaje, int min, int max);
 
     }
 }

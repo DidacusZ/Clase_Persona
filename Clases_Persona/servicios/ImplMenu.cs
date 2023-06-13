@@ -8,7 +8,7 @@ namespace Clases_Persona.servicios
 {
     internal class ImplMenu : InterfaceMenu
     {       
-        public int CapturaNumPulsado(string mensaje, int min, int max)
+        private int CapturaNumPulsado(string mensaje, int min, int max)
         {
             Console.Write("{0} [{1}...{2}]:",mensaje,min,max);
             return Console.ReadKey(true).KeyChar - '0';             
@@ -33,5 +33,6 @@ namespace Clases_Persona.servicios
 
             return CapturaNumPulsado("\t\t\tPulse su opción", 0, 2);
         }
+
     }
 }
