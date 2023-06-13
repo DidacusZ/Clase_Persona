@@ -9,9 +9,9 @@ namespace Clases_Persona.entidades
     internal class Persona
     {
         //atributos
-        string nombre;
-        string apellidos;
-        int anio, mes, dia;
+        private string nombre;
+        private string apellidos;
+        private int anio, mes, dia;
 
         //constructor vacio
         public Persona()
